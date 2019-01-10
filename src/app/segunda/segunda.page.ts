@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { settings } from 'cluster';
 
 @Component({
   selector: 'app-segunda',
@@ -9,9 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 export class SegundaPage implements OnInit {
 
 
+  settings: any;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.settings = [
+      {name: 'Predial', color: 'pink', icon: 'home'},
+      {name: 'Valorización', color: 'blue', icon: 'trending-up'},
+      {name: 'Impuesto', color: 'yellow', icon: 'logo-usd'},
+      {name: 'IVA', color: 'purple', icon: 'pricetag'}
+    ];
   }
 
 }
