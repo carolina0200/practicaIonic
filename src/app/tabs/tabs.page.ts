@@ -16,4 +16,8 @@ export class TabsPage implements OnInit {
   ngOnInit() {
   }
 
+  select(page) {
+    console.log('page ' + page + ' selected');
+  }
+
 }

@@ -5,7 +5,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
   <ion-item>
     <ion-input placeholder="Parámetro" [(ngModel)] = "valor"></ion-input>
@@ -13,18 +12,11 @@
   <ion-button expand = "full" routerLink = "/segunda">
     Push con routerLink
   </ion-button>
-
   <ion-button expand = "full" (click) = "pushSegunda()">
     Push con router angular
   </ion-button>
-
-  
   <ion-button expand = "full" (click) = "pushSegundaNavCtrl()">
     Push con nav controller
   </ion-button>
-
-  <ion-button expand = "full" routerLink = "/tabs">
-      go tbas
-    </ion-button>
 </ion-content>
 

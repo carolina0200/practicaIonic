@@ -6,20 +6,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TabsPage } from './tabs.page';
+import { PerfilPageModule } from '../perfil/perfil.module';
+import { SegundaPageModule } from '../segunda/segunda.module';
+import { TabsRoutingModule } from './tabs-routing.module';
+import { HomePageModule } from '../home/home.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: TabsPage
-  }
-];
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    TabsRoutingModule,
+    PerfilPageModule,
+    SegundaPageModule,
+    HomePageModule
   ],
   declarations: [TabsPage]
 })
