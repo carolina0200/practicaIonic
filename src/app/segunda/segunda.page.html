@@ -1,17 +1,24 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>segunda</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>Soy la segunda pagina</h1>
+  <h1 style="text-align: center">Soy la segunda pagina</h1>
 
-  <app-box *ngFor="let item of [1,1,1,1,1,1] " ></app-box>
-  <ion-fab vertical="bottom" horizontal="end">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let item of [1,1,1,1] " size="6">
+        <div class="pink"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--
+    <ion-fab vertical="bottom" horizontal="end">
     <ion-fab-button>Share</ion-fab-button>
 
     <ion-fab-list side="top">
@@ -25,4 +32,6 @@
     </ion-fab-list>
 
   </ion-fab>
+ -->
+
 </ion-content>
