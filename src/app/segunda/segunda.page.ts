@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HobbitsService } from '../services/hobbits.service';
 
 @Component({
   selector: 'app-segunda',

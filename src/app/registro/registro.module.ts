@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
-import { PerfilPage } from './perfil.page';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+import { IonicModule } from '@ionic/angular';
+
+import { RegistroPage } from './registro.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PerfilPage
+    component: RegistroPage
   }
 ];
 
@@ -19,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    NgxChartsModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [PerfilPage]
+  declarations: [RegistroPage]
 })
-export class PerfilPageModule {}
+export class RegistroPageModule {}

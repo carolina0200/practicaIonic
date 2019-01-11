@@ -4,14 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding id="content">
   <span style="justify-content: center; display: flex">
     <img class="avatar" src="../../assets/YO.jpg">
   </span>
   <ion-card>
     <ion-item>
-      <ion-icon name="contact" slot="start"></ion-icon>
-      <ion-label>Carolina Giraldo</ion-label>
+      <ion-avatar  slot="start">
+        <img src="../../assets/YO.jpg">
+      </ion-avatar>
+      <ion-label> Carolina Giraldo</ion-label>
       <ion-button fill="outline" slot="end">Img</ion-button>
     </ion-item>
 
@@ -19,11 +21,11 @@
       My name is Carolina, I'm from Granada Antioquia and this is my app
     </ion-card-content>
   </ion-card>
- 
-   <span *ngIf="data">
-      <ngx-charts-bar-vertical [view]="view" [results]="data" xAxis="true" yAxis="true"  
-        showXAxisLabel="true" showYAxisLabel="true" xAxisLabel="Actividad" yAxisLabel="Días">
-      </ngx-charts-bar-vertical>
-    </span>
+
+  <span *ngIf="data">
+    <ngx-charts-bar-vertical [view]="view" [results]="data" xAxis="true" yAxis="true" showXAxisLabel="true"
+      showYAxisLabel="true" xAxisLabel="Actividad" yAxisLabel="Días">
+    </ngx-charts-bar-vertical>
+  </span>
 
 </ion-content>
