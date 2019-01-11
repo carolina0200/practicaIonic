@@ -7,16 +7,18 @@
 </ion-header>
 <ion-content padding>
   <ion-item>
-    <ion-input placeholder="Parámetro" [(ngModel)] = "valor"></ion-input>
+    <ion-input placeholder="Parámetro" [(ngModel)]="valor"></ion-input>
   </ion-item>
-  <ion-button expand = "full" routerLink = "/segunda">
-    Push con routerLink
-  </ion-button>
-  <ion-button expand = "full" (click) = "pushSegunda()">
+  <p>
+    <ion-button routerLink="/login" color="dark">
+      Login
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-button>
+  </p>
+  <ion-button expand="full" (click)="pushSegunda()">
     Push con router angular
   </ion-button>
-  <ion-button expand = "full" (click) = "pushSegundaNavCtrl()">
+  <ion-button expand="full" (click)="pushSegundaNavCtrl()">
     Push con nav controller
   </ion-button>
 </ion-content>
-
