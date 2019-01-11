@@ -19,4 +19,11 @@
       My name is Carolina, I'm from Granada Antioquia and this is my app
     </ion-card-content>
   </ion-card>
+ 
+   <span *ngIf="data">
+      <ngx-charts-bar-vertical [view]="view" [results]="data" xAxis="true" yAxis="true"  
+        showXAxisLabel="true" showYAxisLabel="true" xAxisLabel="Actividad" yAxisLabel="Días">
+      </ngx-charts-bar-vertical>
+    </span>
+
 </ion-content>
