@@ -1,41 +1,54 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button color = "secondary"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Login</ion-title>
+    <ion-title>App impuestos login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding no-bounce text-center>
+  <span style="justify-content: center; display: flex">
+    <img  height="100px"  src="../../assets/municipio-b.png">
+  </span>
+  <ion-row align-items: flex-end>
+    <form [formGroup]="loginForm">
+      <ion-item>
+        <ion-icon color="secondary" name="contact" slot="start"></ion-icon>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input required formControlName="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required formControlName="pass"></ion-input>
+      </ion-item>
+    </form>
+  </ion-row>
 
-  <form [formGroup]="loginForm">
-    <ion-item>
-      <ion-icon color="secondary" name="contact" slot="start"></ion-icon>
-      <ion-label position="floating">Username</ion-label>
-      <ion-input required formControlName="user"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon color="secondary" name="key" slot="start"></ion-icon>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required formControlName="pass"></ion-input>
-    </ion-item>
-  </form>
+  <p>
+    <ion-button shape="round"  color="secondary" (click)="login()">Login
+      <ion-icon slot="end" name="send"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" fill="outline" color="primary" routerLink="/registro">
+      Register
+    </ion-button>
+  </p>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Your data</ion-card-subtitle>
-      <ion-card-title>Sorry :c</ion-card-title>
-    </ion-card-header>
 
-    <ion-card-content>
-
-      <ion-icon color="secondary" name="contact" slot="start"></ion-icon>
-      {{loginForm.get('user').value}}
-      <br>
-      <ion-icon color="secondary" name="key" slot="start"></ion-icon>
-      {{loginForm.get('pass').value}}
-
-    </ion-card-content>
-  </ion-card>
+  <!--
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Your data</ion-card-subtitle>
+        <ion-card-title>Sorry :c</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+  
+        <ion-icon color="secondary" name="contact" slot="start"></ion-icon>
+        {{loginForm.get('user').value}}
+        <br>
+        <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+        {{loginForm.get('pass').value}}
+  
+      </ion-card-content>
+    </ion-card>
+  -->
 </ion-content>

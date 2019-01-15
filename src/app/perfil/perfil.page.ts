@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HobbitsService } from '../services/hobbits.service';
+import { Storage } from '@ionic/storage';
+import { NavController } from '@ionic/angular';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { HobbitsService } from '../services/hobbits.service';
 })
 export class PerfilPage implements OnInit {
 
-  constructor(private hobbit: HobbitsService) { }
+  constructor(private hobbit: HobbitsService, private storage: Storage, private navCtrl: NavController) { }
 
   content = document.querySelector('ion-content');
   view: number[] = [350, 300];
@@ -52,4 +54,8 @@ export class PerfilPage implements OnInit {
     this.view = [width, 300];
   }
 
+  logout() {
+    this.storage.remove('user');
+    this.navCtrl.navigateForward('/login');
+  }
 }

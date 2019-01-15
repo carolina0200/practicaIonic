@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding no-bounce text-center>
+  <ion-row align-items: flex-end>
+    <form [formGroup]="registerForm">
+      <ion-item>
+        <ion-icon color="secondary" name="contact" slot="start"></ion-icon>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input required formControlName="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required formControlName="pass"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" required formControlName="passCon"></ion-input>
+      </ion-item>
+    </form>
+  </ion-row>
 
+  <p>
+    <ion-button shape="round" fill="outline" color="dark" (click)="register()">Sing up
+      <ion-icon slot="end" name="send"></ion-icon>
+    </ion-button>
+  </p>
 </ion-content>
