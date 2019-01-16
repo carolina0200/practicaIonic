@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
@@ -7,18 +7,18 @@ import { NavController } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  valor = 'Carolina';
 
+  settings: any;
   constructor(private router: Router, private navCtrl: NavController) {}
 
-  pushSegunda() {
-    this.router.navigate(['/segunda']);
-   // this.router.navigateByUrl('/segunda/${this.valor}');
-  }
-
-  pushSegundaNavCtrl() {
-    this.navCtrl.navigateForward('/segunda');
+  ngOnInit() {
+    this.settings = [
+      {name: 'Predial', color: 'pink', icon: 'home', img: '../../assets/predial.png'},
+      {name: 'Valorización', color: 'blue', icon: 'trending-up', img: '../../assets/valo.png'},
+      {name: 'Impuesto', color: 'yellow', icon: 'logo-usd', img: '../../assets/impuesto.png'},
+      {name: 'IVA', color: 'purple', icon: 'pricetag', img: '../../assets/iva.png'}
+    ];
   }
 }

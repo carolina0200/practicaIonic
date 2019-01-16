@@ -6,7 +6,7 @@
 
 <ion-content padding no-bounce text-center>
   <span style="justify-content: center; display: flex">
-    <img  height="100px"  src="../../assets/municipio-b.png">
+    <img height="100px" src="../../assets/municipio-b.png">
   </span>
   <ion-row align-items: flex-end>
     <form [formGroup]="loginForm">
@@ -24,10 +24,10 @@
   </ion-row>
 
   <p>
-    <ion-button shape="round"  color="secondary" (click)="login()">Login
+    <ion-button shape="round" color="secondary" (click)="login()">Login
       <ion-icon slot="end" name="send"></ion-icon>
     </ion-button>
-    <ion-button shape="round" fill="outline" color="primary" routerLink="/registro">
+    <ion-button shape="round" color="primary" routerLink="/registro">
       Register
     </ion-button>
   </p>
@@ -52,3 +52,17 @@
     </ion-card>
   -->
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-title>
+      SAIMYR SAS
+    </ion-title>
+
+    <ion-thumbnail slot="end">
+      <ion-img src="../../assets/saimyr.png"></ion-img>
+    </ion-thumbnail>
+
+  </ion-toolbar>
+</ion-footer>

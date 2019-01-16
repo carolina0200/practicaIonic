@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -29,6 +30,12 @@ export class RegistroPage implements OnInit {
           const res = await this.afAuth.auth.createUserWithEmailAndPassword(this.registerForm.get('user').value + '@caroapp.com' ,
           this.registerForm.get('pass').value);
           console.log(res);
+          Swal({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            type: 'error',
+            confirmButtonText: 'Cool'
+          });
         } catch (err) {
           console.dir(err);
         }
