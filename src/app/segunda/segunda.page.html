@@ -8,7 +8,12 @@
 </ion-header>
 
 <ion-content padding>
-
-
-
+    <div class="md-marked">
+        <div [(ngModel)]="calendar" mbsc-calendar [mbsc-options] ="calendarSettings"></div>
+        <mbsc-listview [options] ="listviewOptions">
+            <mbsc-listview-item *ngFor="let item of listviewItems">
+                <span class="md-marked-points md-points-type{{item.id}}"></span> {{item.text}}
+            </mbsc-listview-item>
+        </mbsc-listview>
+    </div>
 </ion-content>

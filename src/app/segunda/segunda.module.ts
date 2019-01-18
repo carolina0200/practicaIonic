@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { SegundaPage } from './segunda.page';
 import { BoxComponent } from '../box/box.component';
+import { MbscModule } from '@mobiscroll/angular';
 const routes: Routes = [
   {
     path: '',
@@ -15,9 +16,10 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MbscModule,
+    FormsModule
   ],
   declarations: [SegundaPage, BoxComponent]
 })

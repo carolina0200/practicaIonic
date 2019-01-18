@@ -1,0 +1,38 @@
+.demo-marked-day-description {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.md-marked .md-marked-points {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 7px;
+    margin: 0 4px 0 0;
+    border-radius: 7px;
+    background: #aaa;
+}
+
+.md-marked .md-points-type1 {
+    background: rgb(34, 139, 34);
+}
+
+.md-marked .md-points-type2 {
+    background: rgb(163, 0, 38);
+}
+
+.md-marked .md-points-type3 {
+    background: rgb(204, 204, 0);
+}
+
+.md-marked .md-points-type4 {
+    background: rgb(28, 161, 227);
+}
+
+.md-marked .md-points-type5 {
+    background: rgb(250, 104, 0);
+}
+
+.md-i-hide {
+    display: none;
+}
