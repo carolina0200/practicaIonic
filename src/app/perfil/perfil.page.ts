@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HobbitsService } from '../services/hobbits.service';
 import { Storage } from '@ionic/storage';
 import { NavController } from '@ionic/angular';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { NavController } from '@ionic/angular';
 })
 export class PerfilPage implements OnInit {
 
-  constructor(private hobbit: HobbitsService, private storage: Storage, private navCtrl: NavController) { }
+  constructor(private hobbit: HobbitsService, private storage: Storage, private navCtrl: NavController, private camera: Camera) { }
+  myPhoto: any;
 
   content = document.querySelector('ion-content');
   view: number[] = [350, 300];
@@ -57,5 +59,26 @@ export class PerfilPage implements OnInit {
   logout() {
     this.storage.remove('user');
     this.navCtrl.navigateForward('/login');
+  }
+
+  takePhoto() {
+    console.log('take phto');
+    const options: CameraOptions = {
+      quality: 70,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    };
+    this.camera.getPicture(options).then((imageData) => {
+     // imageData is either a base64 encoded string or a file URI
+     // If it's base64 (DATA_URL):
+     this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+     // Handle error
+    });
+  }
+
+  uploadImage() {
+
   }
 }

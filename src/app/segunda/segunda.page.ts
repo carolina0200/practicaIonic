@@ -66,7 +66,10 @@ export class SegundaPage  {
       }, {
           d: '12/26',
           color: 'rgb(250,104,0)'
-      }]
+      }],
+      onSetDate: (event, inst) => {
+        console.log(event);
+    },
   };
   listviewItems = [{
       id: 1,
@@ -88,4 +91,5 @@ export class SegundaPage  {
       theme: 'ios',
       swipe: true
   };
+
 }

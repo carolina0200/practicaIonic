@@ -13,8 +13,6 @@
       </ion-item>
     </ng-container>
   </ion-card>
-
-
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let item of settings" size="6">
@@ -29,8 +27,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
   <ion-list>
     <ion-item *ngFor="let item of settings">
       <ion-thumbnail slot="start">
@@ -40,31 +36,8 @@
       <ion-icon name="arrow-forward" slot="end" color = "medium"></ion-icon>
     </ion-item>
   </ion-list>
-
-  <ion-list>
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>Item</ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
-
-
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>Share</ion-fab-button>
-
     <ion-fab-list side="top">
       <ion-fab-button>
         <ion-icon name="logo-facebook"></ion-icon>
